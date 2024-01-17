@@ -85,6 +85,7 @@ body {
 
 .subject:hover{
     background-color: #635484;
+    cursor: pointer
 }
 .subject span {
     color: whitesmoke;
