@@ -9,20 +9,14 @@ function getRandomArticle() {
         // Extract the first page from the API response
         const pageId = Object.keys(data.query.pages)[0];
         const articleContent = data.query.pages[pageId].extract;
+        const articleTitle = data.query.pages[pageId].title;
+        console.log(articleTitle)
+
   
         // Set the content to the HTML span with the ID 'articleContent'
         document.getElementById('articleContent').innerHTML = articleContent;
+        document.getElementById('artTitle').innerHTML = articleTitle;
   
-        // Check if there is an image for the article
-        if (data.query.pages[pageId].hasOwnProperty('thumbnail')) {
-          const imageUrl = data.query.pages[pageId].thumbnail.source;
-          // Create an image element and set its source
-          const imgElement = document.createElement('img');
-          imgElement.src = imageUrl;
-  
-          // Append the image element to the HTML div with the ID 'imageContainer'
-          document.getElementById('imageContainer').appendChild(imgElement);
-        }
       })
       .catch(error => {
         console.error('Error fetching random article:', error);

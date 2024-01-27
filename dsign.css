@@ -69,10 +69,11 @@ body {
 
 .subject-container {
     width: 10%;
-    height:1100px;
+    height:100%;
     background-color: #333962;
     text-align: center;
     border-right:solid 3px;
+    border-bottom:solid 3px;
     color: #000;
 
 }
@@ -104,13 +105,18 @@ body {
     margin-top: 20px;
     margin-right: 20px;
 }
-/* 
-.subject-media-container {
-    float: right;
-    height: 1100px;
-    width: 20%;
-    background-color: #333962;
+
+.artTitle {
     text-align: center;
-    border-left:solid 3px;
-    color: #000; */
-/* } */
+    font-size: 2em;
+}
+
+.video {
+    width: 250px;
+    height: 100px;
+    display: flex;
+    flex-wrap: nowrap;
+    background-color: #000;
+    margin: 20px;
+    padding:20px;
+}
