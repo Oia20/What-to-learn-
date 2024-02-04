@@ -10,7 +10,7 @@ function authenticate() {
 }
 function loadClient() {
   console.log("6")
-  gapi.client.setApiKey(GKEY);
+  gapi.client.setApiKey("AIzaSyARpCZ79QFAPhtYfuxcOtIBBLZ9cTBV_vU");
   console.log("7")
   return gapi.client.load("https://www.googleapis.com/discovery/v1/apis/youtube/v3/rest")
       .then(function() { console.log("GAPI client loaded for API"); },
