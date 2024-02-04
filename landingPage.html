@@ -4,10 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>What should I learn?</title>
-    <link rel="stylesheet" href="dsign.css">
+    <link rel="stylesheet" href="dsign.css">\
+    <script src="https://apis.google.com/js/platform.js"></script>
+    <script src="https://apis.google.com/js/api.js"></script>
     <script src="randomArt.js"></script>
+    <script src="randomVideo.js"></script>
+
   </head>
-  <body>
+  <body onload="getRandomArticle()">
+  <!-- <body> -->
     <header class="head-1">
       <div class="logo">
         <span>Learn</span>
@@ -26,48 +31,95 @@
       </section>
 
       <section class="content-main">
+        <ul class="nav">
+          <li>
+            <h3>Categories ▼</h3>
+            <ul>
+                <li onclick="getRandomArticle();">Random</li>
+                <li onclick="getOtherArticle('Category:Computer_science');">Computer Science</li>
+                <li onclick="getOtherArticle('Category:Mathematics_education')">Math</li>
+                <li onclick="getOtherArticle('Category:Literature')">English</li>
+                <li onclick="getOtherArticle('Category:Painting')">Painting</li>
+                <li onclick="getOtherArticle('Category:Thought')">Thought</li>
+                <li onclick="getOtherArticle('Category:Logic')">Logic</li>
+                <li onclick="getOtherArticle('Category:Theology')">Theology</li>
+                <li onclick="getOtherArticle('Category:Psychology_stubs')">Psychology</li>
+                <li onclick="getOtherArticle('Category:Geography')">Geography</li>
+                <li onclick="getOtherArticle('Category:Physical_exercise')">Exercise</li>
+                <li onclick="getOtherArticle('Category:The_arts')">Arts</li>
+                <li onclick="getOtherArticle('Category:Biology')">Biology</li>
+                <li onclick="getOtherArticle('Category:Astronomy')">Astronomy</li>
+                <li onclick="getOtherArticle('Category:Law_stubs')">Law</li>
+                <li onclick="getOtherArticle('Category:Finance_stubs')">Finance</li>
+
+            </ul>
+          </li>
+        </ul>
         <div class="subject-container">
-          <div class="subject" onclick="getRandomArticle()">
+          <div class="subject" onclick="getRandomArticle();">
             <span>Random</span>
           </div>
-          <div class="subject">
+          <div class="subject" onclick="getOtherArticle('Category:Computer_science');">
             <span>Computer Science</span>
           </div>
-          <div class="subject">
+          <div class="subject" onclick="getOtherArticle('Category:Mathematics_education')">
             <span>Math</span>
           </div>
-          <div class="subject">
+          <div class="subject" onclick="getOtherArticle('Category:Literature')">
             <span>English</span>
           </div>
-          <div class="subject">
-            <span>Random</span>
+          <div class="subject" onclick="getOtherArticle('Category:Painting')">
+            <span>Painting</span>
           </div>
-          <div class="subject">
-            <span>Random</span>
+          <div class="subject" onclick="getOtherArticle('Category:Thought')">
+            <span>Thought</span>
           </div>
-          <div class="subject">
-            <span>Random</span>
+          <div class="subject" onclick="getOtherArticle('Category:Logic')">
+            <span>Logic</span>
           </div>
-          <div class="subject">
-            <span>Random</span>
+          <div class="subject" onclick="getOtherArticle('Category:Theology')">
+            <span>Theology</span>
           </div>
-          <div class="subject">
-            <span>Random</span>
+          <div class="subject" onclick="getOtherArticle('Category:Psychology_stubs')">
+            <span>Psychology</span>
           </div>
+          <div class="subject" onclick="getOtherArticle('Category:Geography')">
+            <span>Geography</span>
+          </div>
+          <div class="subject" onclick="getOtherArticle('Category:Physical_exercise')">
+            <span>Exercise</span>
+          </div>
+          <div class="subject" onclick="getOtherArticle('Category:The_arts')">
+            <span>Arts</span>
+          </div>
+          <div class="subject" onclick="getOtherArticle('Category:Biology')">
+            <span>Biology</span>
+          </div>
+          <div class="subject" onclick="getOtherArticle('Category:Astronomy')">
+            <span>Astronomy</span>
+          </div>
+          <div class="subject" onclick="getOtherArticle('Category:Law_stubs')">
+            <span>Law</span>
+          </div>
+          <div class="subject" onclick="getOtherArticle('Category:Finance_stubs')">
+            <span>Finance</span>
+          </div>
+          <div class="restOfPage"></div>
         </div>
 
         <div class="subject-content">
           <div id="imageContainer"></div>
-          <h1 id="artTitle" class="artTitle"></h1>
+          <h1 id="artTitle" class="artTitle">Lorem ipsum</h1>
           <p id="articleContent">Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta nihil, ullam quas error quod neque voluptas cupiditate voluptates expedita deleniti eligendi, dicta aut architecto deserunt sequi sint minus, recusandae quidem!</p>
         </div>
       </section>
-
       <section class="content-videos">
+        <h1 class="vidsTitle">Videos on topic</h1>
         <div class="subject-vids-container">
-          <div class="video"></div>
-          <div class="video"></div>
-          <div class="video"></div>
+          <iframe src="https://www.youtube.com/embed/eI4an8aSsgw" class="video" id="video1"></iframe>
+          <iframe src="https://www.youtube.com/embed/eI4an8aSsgw" class="video" id="video2"></iframe>
+          <iframe src="https://www.youtube.com/embed/eI4an8aSsgw" class="video" id="video3"></iframe>
+          
         </div>
       </section>
 

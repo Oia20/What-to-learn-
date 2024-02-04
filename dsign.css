@@ -3,7 +3,7 @@
     width: 180px;
     height: 75px;
     background-color: #FFADDB;
-    margin-top: -10px;
+    margin-top: -20px;
     margin-left: 20px;
     justify-content:center;
     align-items: center;
@@ -11,12 +11,20 @@
     font-family: cursive;
     font-style: italic;
     position:fixed;
-    z-index: 1;
+    z-index: 6;
 }
+
+@media screen and (max-width: 733px) {
+    .logo {
+        display: none;
+    }
+}
+
+
 
 .img-section img{
     width: 100%;
-    height:700px;
+    height:500px;
     object-fit:cover;
     text-align: center;
     /* border-bottom: #635484 ;
@@ -29,6 +37,7 @@
 
 body {
     margin: 0;
+    background-color: #635484;
 }
 
 .img-filter {
@@ -36,36 +45,20 @@ body {
     top: 0;
     left: 0;
     width: 100%;
-    height: 700px;
+    height: 500px;
     background: linear-gradient(to bottom, #001f3f, transparent);
 }
 
-@media screen and (min-width: 1301px) {
-    .quote {
-        position: absolute;
-        top: 30%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        color:whitesmoke;
-        font-size: 45px;
-        z-index: 1;
-        text-shadow: 0px 0px 10px #000000;
-    }
+.quote {
+    font-size: calc(15px + 0.390625vw);
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color:whitesmoke;
+    z-index: 1;
+    text-shadow: 0px 0px 10px #000000;
 }
-
-
-@media screen and (max-width: 1300px) {
-    .quote {
-        position: absolute;
-        top: 30%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        color:whitesmoke;
-        font-size: 25px;
-        z-index: 1;
-        text-shadow: 0px 0px 10px #000000;
-    }
-  }
 
 .subject-container {
     width: 10%;
@@ -96,7 +89,7 @@ body {
 .content-main {
     display: flex;
     background-color: #635484;
-    color: whitesmoke;
+    color: #001f3f;
     font-size: 1.2rem;
 }
 
@@ -112,11 +105,130 @@ body {
 }
 
 .video {
-    width: 250px;
-    height: 100px;
-    display: flex;
-    flex-wrap: nowrap;
+    /* width: 250px;
+    height: 100px; */
     background-color: #000;
-    margin: 20px;
     padding:20px;
+    margin: 20px;
+}
+
+.subject-vids-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.vidsTitle {
+    text-align: center;
+}
+
+.content-videos {
+    background-color: #635484;
+    border-top: #333962 solid 5px;
+    margin-top: 5px;
+}
+main {
+    background-color: #635484;
+}
+
+.subject-container-hider {
+    display: none;
+}
+
+.nav {
+    display: none;
+}
+
+
+@media screen and (max-width: 1045px) {
+    .subject-container {
+        display: none;
+    }
+
+    .nav {
+        display: block;
+        list-style: none;
+        font-weight: bold;
+        margin-bottom: 10px;
+        float: left;
+        width: 100%;
+        position: absolute;
+        z-index: 5;
+        margin: 0px;
+        padding: 0px;
+    }
+    .nav li {
+        float: left;
+        margin-right: 10px;
+        position: relative;
+
+    }
+    .nav h3 {
+        display: block;
+        color: #FFF;
+        background-color: #333962;
+        text-decoration: none;
+        margin: 0px;
+        border: 3px solid #000;
+        border-top: 0px;
+        border-left: 0px;
+
+
+
+    }
+    .nav h3:hover {
+        color: #fff;
+        background-color: #635484;
+        cursor: pointer;
+       
+    }
+    
+    /*--- DROPDOWN ---*/
+    .nav ul {
+        background: #001f3f;
+        color: #000;
+        list-style: none;
+        position: absolute;
+        left: -9999px; 
+        padding-left: 0px;
+
+    }
+    .nav ul li {
+        padding-top: 1px; 
+        float: none;
+        background-color: #333962;
+        text-align: center;
+        border-right:solid 3px;
+        border-bottom:solid 3px;
+        border-color: #000;
+        color: #000;
+
+        
+    }
+    .nav ul li {
+        white-space: nowrap;
+        margin:5px;
+    }
+    .nav li:hover ul { 
+        left: 0; 
+        cursor: pointer;
+
+    }
+    .nav li:hover { 
+        background-color: #635484;
+    }
+    .nav li:hover ul {
+        text-decoration: none;
+    }
+    .nav li:hover ul li h3:hover { 
+        background-color: #333;
+    }
+}
+
+
+@media screen and (max-width: 344px) {
+    .video {
+        width:230px;
+    }
 }
