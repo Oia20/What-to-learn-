@@ -10,7 +10,7 @@ Technologies used:
 - WikiAPI to pull the articles and content
 - HTML
 - CSS
-- Vanilla CS
+- Vanilla JS
 - VScode
 - Github Pages
 
